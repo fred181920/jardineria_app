@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+
+    <record model="res.partner" id="res_partner_nng">
+        <field name="name">Neil Armstrong</field>
+    </record>
+
+    <record model="res.partner" id="res_partner_bman">
+        <field name="name">Bricomania-man</field>
+    </record>
+
+    <record model="res.partner" id="res_partner_jf">
+        <field name="name">Jhon Fisher</field>
+    </record>
+
+    <record model="res.partner" id="res_partner_cb">
+        <field name="name">The Carlson's Boys</field>
+    </record>
+
+    <record model="jardineria.marcas" id="jardineria_marcas_mm">
+        <field name="name">Media Markt</field>
+    </record>
+
+    <record model="jardineria.marcas" id="jardineria_marcas_lm">
+        <field name="name">Leroy Merlín</field>
+    </record>
+
+    <record model="jardineria.herramientas" id="jardineria_herramientas_hrm1">
+        <field name="name">Cortacésped bien bonito</field>
+        <field name="description">Cortacésped verde bien bonito y la verdad es que funciona bastante bien</field>
+        <field name="fuel_type">gasoil</field>
+        <field name="leasable" eval="True"/>
+        <field name="price">132.99</field>
+        <field name="leasable_price">20.0</field>
+        <field name="stock">30</field>
+        <field name="fabrication_date">2020-09-04</field>
+        <field name="image" type="base64" file="jardineria_app/static/images/cortacesped.png"/>
+        <field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]" />
+        <field name="seller_ids" eval="[(4, ref('res_partner_nng'))]" />
+        <field name="stars">4</field>
+    </record>
+
+    <record model="jardineria.herramientas" id="jardineria_herramientas_hrm2">
+        <field name="name">Kit Herramientas Jardinería</field>
+        <field name="description">Kit de herramientas bastante útil para los jardineros que acaban de empezar en el mundillo</field>
+        <field name="fuel_type">nothing</field>
+        <field name="leasable" eval="False"/>
+        <field name="price">26.70</field>
+        <field name="leasable_price">0.0</field>
+        <field name="stock">287</field>
+        <field name="fabrication_date">2019-02-18</field>
+        <field name="image" type="base64" file="jardineria_app/static/images/kitherramientas.png"/>
+        <field name="brand_ids" eval="[(6, 0, [ref('jardineria_marcas_lm'),ref('jardineria_marcas_mm')])]" />
+        <field name="seller_ids" eval="[(4, ref('res_partner_cb'))]" />
+        <field name="stars">3</field>
+    </record>
+
+    <record model="jardineria.herramientas" id="jardineria_herramientas_hrm3">
+        <field name="name">Pala</field>
+        <field name="description">Pala simple de usar y ergonómica, perfecta para los amantes de la plantación</field>
+        <field name="fuel_type">nothing</field>
+        <field name="leasable" eval="True"/>
+        <field name="price">29.99</field>
+        <field name="leasable_price">7.0</field>
+        <field name="stock">92</field>
+        <field name="fabrication_date">2021-01-24</field>
+        <field name="image" type="base64" file="jardineria_app/static/images/pala.png"/>
+        <field name="brand_ids" eval="[(4, ref('jardineria_marcas_lm'))]" />
+        <field name="seller_ids" eval="[(6, 0, [ref('res_partner_bman'), ref('res_partner_jf')])]" />
+        <field name="stars">5</field>
+    </record>
+
+    <record model="jardineria.herramientas" id="jardineria_herramientas_hrm4">
+        <field name="name">Rastrillo fuerte</field>
+        <field name="description">Rastrillo bien fuerte para esas hojas secas que no quieren salir de la maleza</field>
+        <field name="fuel_type">nothing</field>
+        <field name="leasable" eval="True"/>
+        <field name="price">45.93</field>
+        <field name="leasable_price">9.42</field>
+        <field name="stock">87</field>
+        <field name="fabrication_date">2020-11-27</field>
+        <field name="image" type="base64" file="jardineria_app/static/images/rastrillo.png"/>
+        <field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]" />
+        <field name="seller_ids" eval="[(4, ref('res_partner_jf'))]" />
+        <field name="stars">2</field>
+    </record>
+
+    <record model="jardineria.herramientas" id="jardineria_herramientas_hrm5">
+        <field name="name">Tijeras de podar</field>
+        <field name="description">Tijeras de podar ligeras y fuertes para que ningún arbusto se resista</field>
+        <field name="fuel_type">nothing</field>
+        <field name="leasable" eval="False"/>
+        <field name="price">56.72</field>
+        <field name="leasable_price">0.0</field>
+        <field name="stock">104</field>
+        <field name="fabrication_date">2019-05-08</field>
+        <field name="image" type="base64" file="jardineria_app/static/images/tijeraspodar.png"/>
+        <field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]" />
+        <field name="seller_ids" eval="[(6, 0, [ref('res_partner_cb'), ref('res_partner_bman'), ref('res_partner_nng')])]" />
+        <field name="stars">3</field>
+    </record>
+
+</odoo>

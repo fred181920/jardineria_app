@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+	<record model="res.partner" id="res_partner_dp">
+		<field name="name">Dutch Passion</field>
+	</record>
+	<record model="res.partner" id="res_partner_ss">
+		<field name="name">Sweet Seeds</field>
+	</record>
+	<record model="res.partner" id="res_partner_d">
+		<field name="name">Dinafem</field>
+	</record>
+
+	<record model="jardineria.semillas" id="jardineria_semillas_tomate">
+		<field name="name">Semillas de tomate</field>
+		<field name="weight">10</field>
+		<field name="price">99.00</field>
+		<field name="description">Semillas de tomate ni mas ni menos</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/tomate.jpeg"></field>
+		<field name="stock">10</field>
+		<field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]"></field>
+		<field name="seller_ids" eval="[(4, ref('res_partner_d'))]"></field>
+	</record>
+	<record model="jardineria.semillas" id="jardineria_semillas_naranja">
+		<field name="name">Semillas de tomate</field>
+		<field name="weight">10</field>
+		<field name="price">22.00</field>
+		<field name="description">Semillas de naranja se parece a la mandarina pero no lo es</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/naranja.jpeg"></field>
+		<field name="stock">10</field>
+		<field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]"></field>
+		<field name="seller_ids" eval="[(4, ref('res_partner_d'))]"></field>
+
+	</record>
+	<record model="jardineria.semillas" id="jardineria_semillas_dragon">
+		<field name="name">Semillas de dragon</field>
+		<field name="weight">10</field>
+		<field name="price">100.00</field>
+		<field name="description">Semillas de dragon no son de dragon de verdad ni se le parece pero mola mas ese nombre</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/dragon.jpeg"></field>
+		<field name="stock">10</field>
+		<field name="brand_ids" eval="[(4, ref('jardineria_marcas_lm'))]"></field>
+		<field name="seller_ids" eval="[(4, ref('res_partner_d'))]"></field>
+	</record>
+	<record model="jardineria.semillas" id="jardineria_semillas_lichi">
+		<field name="name">Semillas de lichi</field>
+		<field name="weight">10</field>
+		<field name="price">33.65</field>
+		<field name="description">Semillas de lichi fruta venenosa pero sabrosa sin veneno</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/lichi.jpeg"></field>
+		<field name="stock">10</field>
+		<field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]"></field>
+		<field name="seller_ids" eval="[(4, ref('res_partner_d'))]"></field>
+	</record>
+	<record model="jardineria.semillas" id="jardineria_semillas_ackee">
+		<field name="name">Semillas de ackee</field>
+		<field name="weight">1</field>
+		<field name="price">1.00</field>
+		<field name="description">Semillas de ackee si esa fruta que te puede matar</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/ackee.jpeg"></field>
+		<field name="stock">10</field>
+		<field name="brand_ids" eval="[(4, ref('jardineria_marcas_mm'))]"></field>
+		<field name="seller_ids" eval="[(4, ref('res_partner_d'))]"></field>
+	</record>
+</odoo>

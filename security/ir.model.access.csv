@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_herramientas_user,HerramientasUser,model_jardineria_herramientas,base.group_user,1,1,1,1
+access_semillas_user,SemillasUser,model_jardineria_semillas,base.group_user,1,1,1,1
+access_servicios_user,ServiciossUser,model_jardineria_servicios,base.group_user,1,1,1,1
+access_marcas_user,MarcassUser,model_jardineria_marcas,base.group_user,1,1,1,1

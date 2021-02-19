@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+
+	<record model="jardineria.servicios" id="jardineria_servicios_marcos">
+		<field name="name">Marcos el argentino</field>
+		<field name="age">56</field>
+		<field name="gender">hombre</field>
+		<field name="specialty" type="html"><p>No hago nada pero te cobro igual</p></field>
+		<field name="price">10011.00</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/tomate.jpeg"></field>
+		<field name="cv" type="base64" file="jardineria_app/static/images/cv.jpg"></field>
+        <field name="stars">3</field>
+	</record>
+    <record model="jardineria.servicios" id="jardineria_servicios_sonic">
+		<field name="name">sonic el erizo</field>
+		<field name="age">30</field>
+		<field name="gender">hombre</field>
+		<field name="specialty" type="html"><p>El erizo que te limpia, corta y arregla en segundos el jardin</p></field>
+		<field name="price">1040.00</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/sonic.png"></field>
+		<field name="cv" type="base64" file="jardineria_app/static/images/cv.jpg"></field>
+
+        <field name="stars">5</field>
+	</record>
+    <record model="jardineria.servicios" id="jardineria_servicios_mario">
+		<field name="name">Mario el fontanero</field>
+		<field name="age">32</field>
+		<field name="gender">hombre</field>
+		<field name="specialty" type="html"><p>El fontanero que te ninguna planta piraña se resiste</p></field>
+		<field name="price">400.00</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/MArio.jpeg"></field>
+		<field name="cv" type="base64" file="jardineria_app/static/images/cv.jpg"></field>
+        <field name="stars">5</field>
+	</record>
+    <record model="jardineria.servicios" id="jardineria_servicios_samus">
+		<field name="name">Samus la cazarrecompensas</field>
+		<field name="age">20</field>
+		<field name="gender">mujer</field>
+		<field name="specialty" type="html"><p>Cazarecompensas que derrotara hasta los peores jardines</p></field>
+		<field name="price">1420.00</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/samus.jpeg"></field>
+		<field name="cv" type="base64" file="jardineria_app/static/images/cv.jpg"></field>
+        <field name="stars">3</field>
+	</record>
+    <record model="jardineria.servicios" id="jardineria_servicios_link">
+		<field name="name">Link el heroe</field>
+		<field name="age">25</field>
+		<field name="gender">hombre</field>
+		<field name="specialty" type="html"><p>Heroe sin igual que cortara todas las malezas sin titubear</p></field>
+		<field name="price">8.00</field>
+		<field name="image" type="base64" file="jardineria_app/static/images/link.jpeg"></field>
+		<field name="cv" type="base64" file="jardineria_app/static/images/cv.jpg"></field>
+        <field name="stars">4</field>
+	</record>
+</odoo>

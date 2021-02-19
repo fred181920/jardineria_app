@@ -1,0 +1,34 @@
+<odoo>
+    <menuitem id="jardineria_menu" name="Jardineria" />
+
+    <act_window id="action_jardineria_herramientas"
+        name="Herramientas"
+        res_model="jardineria.herramientas"
+        view_mode="tree,form" />
+
+    <menuitem id="menu_jardineria_herramientas"
+        name="Herramientas"
+        action="action_jardineria_herramientas"
+        parent="jardineria_menu" />
+
+    <act_window id="action_jardineria_semillas"
+        name="Semillas"
+        res_model="jardineria.semillas"
+        view_mode="tree,form" />
+
+    <menuitem id="menu_jardineria_semillas"
+        name="Semillas"
+        action="action_jardineria_semillas"
+        parent="jardineria_menu" />
+
+    <act_window id="action_jardineria_servicios"
+        name="Servicios"
+        res_model="jardineria.servicios"
+        view_mode="tree,form" />
+
+    <menuitem id="menu_jardineria_servicios"
+        name="Servicios"
+        action="action_jardineria_servicios"
+        parent="jardineria_menu" />
+
+</odoo>

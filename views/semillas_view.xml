@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="view_semillas" model="ir.ui.view">
+		<field name="name">Semillas</field>
+		<field name="model">jardineria.semillas</field>
+		<field name="arch" type="xml">
+			<form string="Semillas">
+                <sheet>
+                    <group name="group_top">
+		                <group name="group_left">
+                            <field name="name" />
+							<field name ="weight"/>
+							 <field name="currency_id" invisible="1" />
+							<field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+							<field name="stock"/>
+							<field name="brand_ids" widget="many2many_tags" />
+							<field name="seller_ids" widget="many2many_tags" />
+                        </group>
+		                <group name="group_right">
+							<field name="description"/>
+							<field name="image" widget="image" />
+                        </group>
+                    </group>
+                </sheet>
+			</form>
+		</field>
+	</record>
+<record id="view_tree_semillas" model="ir.ui.view">
+	    <field name="name">Lista de semillas</field>
+
+	    <field name="model">jardineria.semillas</field>
+        <field name="arch" type="xml">
+        <tree>
+			<field name="image" widget="image" width="100" height="100"/>
+		    <field name="name" />
+			<field name="brand_ids" widget="many2many_tags"/>
+			<field name="seller_ids" widget="many2many_tags"/>
+		    <field name="weight"/>
+			<field name="currency_id" invisible="1" />
+		    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+        </tree>
+        </field>
+    </record>
+</odoo>

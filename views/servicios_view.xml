@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="view_servicios" model="ir.ui.view">
+		<field name="name">Servicios</field>
+		<field name="model">jardineria.servicios</field>
+		<field name="arch" type="xml">
+			<form string="Servicios">
+                <sheet>
+                    <group name="group_top">
+		                <group name="group_left">
+                            <field name="name" />
+							<field name ="age"/>
+							<field name="gender"/>
+							<field name="image" widget="image"/>
+                            <field name="stars" widget="priority" force_save="1"/>
+                        </group>
+		                <group name="group_right">
+							 <field name="currency_id" invisible="1" />
+							<field name ="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+							<field name="cv"/>
+							<field name="specialty"/>
+                        </group>
+                    </group>
+                </sheet>
+			</form>
+		</field>
+	</record>
+<record id="view_tree_servicios" model="ir.ui.view">
+	    <field name="name">Lista de servicios</field>
+
+	    <field name="model">jardineria.servicios</field>
+        <field name="arch" type="xml">
+        <tree>
+			<field name="image" widget="image" width="100" height="100"/>
+		    <field name="name" />
+			<field name="age"/>
+			<field name="gender"/>
+		    <field name="specialty"/>
+		    <field name="stars" widget="priority"/>
+			<field name="currency_id" invisible="1" />
+		    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+        </tree>
+        </field>
+    </record>
+</odoo>

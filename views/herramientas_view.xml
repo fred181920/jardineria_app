@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="view_herramientas" model="ir.ui.view">
+		<field name="name">Herramientas</field>
+		<field name="model">jardineria.herramientas</field>
+		<field name="arch" type="xml">
+			<form string="Herramienta">
+                <sheet>
+                    <group name="group_top">
+		                <group name="group_left">
+                            <field name="name" />
+                            <field name="fuel_type" />
+                            <field name="seller_ids" widget="many2many_tags" />
+                            <field name="brand_ids" widget="many2many_tags"/>
+                            <field name="stars" widget="priority" force_save="1"/>
+                        </group>
+						 <group name="group_mid">
+							<field name="leasable"/>
+							<field name="fabrication_date"/>
+							 <field name="currency_id" invisible="1" />
+							<field name="price" widget="monetary" options="{'currency_field': 'currency_id'}" />
+							<field name="leasable_price" attrs="{'invisible': [('leasable', '=', False)]}" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+							 <field name="stock" />
+                        </group>
+		                <group name="group_right">
+							<field name="image" widget="image" width="300" height="300" />
+                        </group>
+						<group name="group_bottom">
+							<field name="description"/>
+                        </group>
+                    </group>
+                </sheet>
+			</form>
+		</field>
+	</record>
+    <record id="view_tree_herramientas" model="ir.ui.view">
+	    <field name="name">Lista de Herramientas</field>
+	    <field name="model">jardineria.herramientas</field>
+        <field name="arch" type="xml">
+        <tree>
+			<field name="image" widget="image" width="100" height="100"/>
+		    <field name="name"/>
+		    <field name="seller_ids" widget="many2many_tags" />
+		    <field name="brand_ids"  widget="many2many_tags"/>
+		    <field name="stars" widget="priority"/>
+		    <field name="stock"/>
+        </tree>
+        </field>
+    </record>
+    <record id="view_search_herramientas" model="ir.ui.view">
+	    <field name="name">Filtros de Herramientas</field>
+	    <field name="model">jardineria.herramientas</field>
+	    <field name="arch" type="xml">
+	    <search>
+		    <field name="brand_ids"/>
+		    <filter name="filter_inactive"
+				 string="Inactive"
+				 domain="[('active','=',False)]"/>
+		    <filter name="filter_active"
+				 string="Active"
+				 domain="[('active','=',True)]"/>
+	    </search>
+	    </field>
+    </record>
+</odoo>
